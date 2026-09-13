@@ -13,13 +13,11 @@ pip install -r requirements.txt
 ## Использование
 
 ```python
-from NekosiaAPI import Nekosia, NekosiaError
+from NekosiaAPI import Nekosia
 
 # одна картинка — ссылка
 url = Nekosia.get_image_url("catgirl")
 
-# сжатая версия
-small = Nekosia.get_image_url("catgirl", compressed=True)
 
 # полный JSON
 data = Nekosia.get_image("catgirl")
@@ -28,7 +26,7 @@ data = Nekosia.get_image("catgirl")
 urls = Nekosia.get_images_with_count("headphones", count=5)
 
 # теги
-Nekosia.print_tags()
+Nekosia.get_tags()
 ```
 
 Полный рабочий пример — в `client.py`.
