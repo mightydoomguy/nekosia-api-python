@@ -36,7 +36,6 @@ Nekosia.get_list_of_tags()
 | Метод | Возвращает |
 |---|---|
 | `Nekosia.get_image(tag="random")` | полный JSON (`dict`) |
-| `Nekosia.get_image_url(tag="random", *, compressed=False)` | `str` или `None` |
 | `Nekosia.get_images_with_count(tag="random", count=5)` | `list[str]` |
 | `Nekosia.get_list_of_tags()` | `list[str]` |
 
