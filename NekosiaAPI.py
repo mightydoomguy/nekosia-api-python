@@ -1,3 +1,8 @@
+"""
+NekosiaAPI — тонкая обёртка над API https://nekosia.cat
+Скопируй этот файл в свой проект и используй как модуль.
+"""
+
 import requests
 
 url = "https://api.nekosia.cat/api/v1/images/"
