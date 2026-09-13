@@ -1,0 +1,49 @@
+# NekosiaAPI-py
+
+Простая обёртка над [Nekosia API](https://nekosia.cat) — один файл, одна зависимость.
+
+## Установка
+
+Скопируй `NekosiaAPI.py` в свой проект и установи зависимость:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Использование
+
+```python
+from NekosiaAPI import Nekosia, NekosiaError
+
+# одна картинка — ссылка
+url = Nekosia.get_image_url("catgirl")
+
+# сжатая версия
+small = Nekosia.get_image_url("catgirl", compressed=True)
+
+# полный JSON
+data = Nekosia.get_image("catgirl")
+
+# несколько картинок
+urls = Nekosia.get_images_with_count("headphones", count=5)
+
+# теги
+Nekosia.print_tags()
+```
+
+Полный рабочий пример — в `client.py`.
+
+## Методы
+
+| Метод | Возвращает |
+|---|---|
+| `Nekosia.get_image(tag="random")` | полный JSON (`dict`) |
+| `Nekosia.get_image_url(tag="random", *, compressed=False)` | `str` или `None` |
+| `Nekosia.get_images_with_count(tag="random", count=5)` | `list[str]` |
+| `Nekosia.get_tags()` | `list[str]` |
+
+
+## Лицензия
+
+MIT — см. [LICENSE](LICENSE).  
+Изображения принадлежат их авторам (см. `attribution.artist` в ответе API).
