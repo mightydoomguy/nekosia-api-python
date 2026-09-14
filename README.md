@@ -7,7 +7,7 @@
 Скопируй `NekosiaAPI.py` в свой проект и установи зависимость:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirments.txt
 ```
 
 ## Использование
@@ -23,7 +23,7 @@ url = Nekosia.get_image_url("catgirl")
 data = Nekosia.get_image("catgirl")
 
 # несколько картинок
-urls = Nekosia.get_images_with_count("headphones", count=5)
+urls = Nekosia.get_image_with_count("headphones", count=5)
 
 # теги
 Nekosia.get_list_of_tags() 
@@ -36,7 +36,7 @@ Nekosia.get_list_of_tags()
 | Метод | Возвращает |
 |---|---|
 | `Nekosia.get_image(tag="random")` | полный JSON (`dict`) |
-| `Nekosia.get_images_with_count(tag="random", count=5)` | `list[str]` |
+| `Nekosia.get_image_with_count(tag="random", count=5)` | `list[str]` |
 | `Nekosia.get_list_of_tags()` | `list[str]` |
 
 
